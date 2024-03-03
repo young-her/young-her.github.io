@@ -24,7 +24,7 @@
 <meta property="og:description" content="什么是机器学习(Machine Learning)？ “机器学习是让计算机像人类一样学习和行动的科学，通过以观察和现实世界互动的形式向他们提供数据和信息，以自主的方式改善他们的学习。”  基于吴恩达老师的视频，整理了以下笔记： 监督学习(supervised learning):可以分为：分类和回归，感觉关系上类似于数学里面的离散和连续，离散的为分类，连续的回归 分类：根据已有数据预测所给要预测的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-24T09:13:07.000Z">
-<meta property="article:modified_time" content="2024-02-26T01:05:34.144Z">
+<meta property="article:modified_time" content="2024-03-03T10:27:29.909Z">
 <meta property="article:author" content="youngz">
 <meta property="article:tag" content="STM32">
 <meta property="article:tag" content="STM32CubeMX">
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          685 字
+          672 字
         
       </span>
     
@@ -290,7 +290,6 @@
 <p>无监督学习仅仅<strong>只有输入x没有输出y</strong></p>
 <p>无监督学习分为 <strong>聚类、异常检测、降维</strong></p>
 <h4 id="线性回归模型-linear-regression"><a href="#线性回归模型-linear-regression" class="headerlink" title="线性回归模型(linear regression):"></a>线性回归模型(linear regression):</h4><p>形如：$y&#x3D;\vec{w}x+b$</p>
-<p>![](C:\Users\1\Pictures\Screenshots\屏幕截图 2024-02-26 081257.png)</p>
 <p>训练之后会得到一个 函数f  输入 想要预测的x之后会得到 <strong>$\hat{y}$</strong> ，$\hat{y}$是一个估计值</p>
 <p>X 称为<strong>输入</strong>函数f也称为模型</p>
 <p><strong>损失函数（loss function）</strong>或<strong>代价函数（cost function）</strong>是将随机事件或其有关随机变量的取值映射为非负实数以表示该随机事件的“风险”或“损失”的函数</p>
@@ -376,9 +375,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/02/24/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-title/" title="机器学习学习笔记 title">
+                      <a href="/2024/03/03/test/" title="test">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">机器学习学习笔记 title</span>
+                        <span class="hidden-mobile">test</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -444,6 +443,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -637,6 +642,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
